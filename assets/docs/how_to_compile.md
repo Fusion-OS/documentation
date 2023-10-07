@@ -15,13 +15,13 @@ repo sync --current-branch --force-sync --no-clone-bundle --no-tags --optimized-
 ```
 
 # Step 2:
-### Clone other stuff && bringup device tree
+### Clone other stuff & bringup device tree
 
 *Assuming you are using LineageOS trees and kernel as base.*
 
 - Clone your device resources to their respective destinations.
 - In DT change `lineage` to `fuse` in respective files.
-- Inherit `common_full_phone.mk` in your device makefile.
+- Inherit `vendor/fuse/config/common.mk` in your device makefile.
 - Remove `LineageOS` specific stuff from your device tree. e.g.: lineagehw, livedisplay, touch etc.
 
 # Step 3:
